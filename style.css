@@ -1,0 +1,32 @@
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Inter", sans-serif;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+main {
+  flex: 1 0 auto;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+.brand-logo {
+  font-family: "Poppins", sans-serif;
+}
+.scrollspy {
+  scroll-margin-top: 80px;
+}
+nav ul a.active {
+  background: rgba(255, 255, 255, 0.2);
+}
+.skill-icon {
+  font-size: 48px;
+}
+.social a {
+  margin: 0 8px;
+}

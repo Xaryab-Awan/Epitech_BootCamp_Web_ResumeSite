@@ -1,11 +1,173 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Me</title>
-</head>
-<body>
-    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Xaryab Awan | Contact</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/materialize.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="grey lighten-5">
+    <header>
+      <div class="navbar-fixed">
+        <nav class="indigo">
+          <div class="nav-wrapper container">
+            <a href="index.html#home" class="brand-logo">Malik Zaryab Awan</a>
+            <a href="#" data-target="mobile-nav" class="sidenav-trigger">
+              <i class="fa-solid fa-bars"></i>
+            </a>
+            <ul class="right hide-on-med-and-down">
+              <li><a href="index.html#home">Home</a></li>
+              <li><a href="index.html#skills">Skills</a></li>
+              <li><a href="index.html#projects">Projects</a></li>
+              <li><a href="index.html#experience">Experience</a></li>
+              <li class="active"><a href="Contact.html">Contact Me</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+
+      <ul class="sidenav" id="mobile-nav">
+        <li><a href="index.html#home">Home</a></li>
+        <li><a href="index.html#skills">Skills</a></li>
+        <li><a href="index.html#projects">Projects</a></li>
+        <li><a href="index.html#experience">Experience</a></li>
+        <li class="active"><a href="Contact.html">Contact Me</a></li>
+      </ul>
+    </header>
+
+    <main class="container">
+      <div class="row">
+        <div class="col s12 m6">
+          <div id="coding-animation"></div>
+        </div>
+
+        <div class="col s12 m6">
+          <div class="card hoverable">
+            <div class="card-content">
+              <h4 class="indigo-text text-darken-2 center-align">
+                Contact Form
+              </h4>
+              <form action="https://formspree.io/f/meaegdkw" method="POST">
+                <div class="row">
+                  <div class="col s12 m6 input-field">
+                    <input
+                      id="name"
+                      name="name"
+                      type="text"
+                      class="validate"
+                      required
+                    />
+                    <label for="name">Name</label>
+                  </div>
+                  <div class="col s12 m6 input-field">
+                    <input
+                      id="email"
+                      name="email"
+                      type="email"
+                      class="validate"
+                      required
+                    />
+                    <label for="email">Email</label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col s12 m6 input-field">
+                    <select id="subject" name="subject">
+                      <option value="" disabled selected>Choose a topic</option>
+                      <option value="job">Job opportunity</option>
+                      <option value="internship">Internship</option>
+                      <option value="collaboration">
+                        Project collaboration
+                      </option>
+                      <option value="other">Other</option>
+                    </select>
+                    <label for="subject">Subject</label>
+                  </div>
+                  <div class="col s12 m6 input-field">
+                    <input id="company" name="company" type="text" />
+                    <label for="company">Company or Organization</label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col s12 input-field">
+                    <textarea
+                      id="message"
+                      name="message"
+                      class="materialize-textarea"
+                      data-length="500"
+                      required
+                    ></textarea>
+                    <label for="message">Message</label>
+                  </div>
+                </div>
+                <div class="center-align">
+                  <button
+                    class="btn-large indigo waves-effect waves-light"
+                    type="submit"
+                  >
+                    Send Message
+                    <i class="fa-solid fa-paper-plane right"></i>
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="page-footer indigo darken-4">
+      <div class="footer-copyright">
+        <div class="container center-align">
+          © 2026 Xaryab Awan |
+          <a
+            class="indigo-text text-lighten-4"
+            href="https://github.com/Xaryab-Awan"
+            target="_blank"
+            >GitHub</a
+          >
+          <a
+            class="indigo-text text-lighten-4"
+            href="https://www.linkedin.com/in/xaryab-awan"
+            target="_blank"
+            >LinkedIn</a
+          >
+          <a
+            class="indigo-text text-lighten-4"
+            href="mailto:malik.xaryab.awan@gmail.com"
+            >Email</a
+          >
+        </div>
+      </div>
+    </footer>
+    <script src="js/materialize.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.12.2/lottie.min.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        M.Sidenav.init(document.querySelectorAll(".sidenav"));
+        M.FormSelect.init(document.querySelectorAll("select"));
+        M.CharacterCounter.init(
+          document.querySelectorAll("textarea[data-length]"),
+        );
+        const anim = lottie.loadAnimation({
+          container: document.getElementById("coding-animation"),
+          renderer: "svg",
+          loop: true,
+          autoplay: true,
+          path: "animations/coding.json",
+        });
+
+        anim.setSpeed(0.8);
+      });
+    </script>
+  </body>
 </html>
