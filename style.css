@@ -30,3 +30,11 @@ nav ul a.active {
 .social a {
   margin: 0 8px;
 }
+@media screen and (max-width: 600px) {
+  nav .brand-logo {
+    font-size: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+  }
+}
